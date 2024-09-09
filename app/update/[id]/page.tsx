@@ -1,8 +1,8 @@
 "use client"
-import {useRouter, redirect} from 'next/navigation'
+import {useRouter} from 'next/navigation'
 import React, {useEffect, useState} from 'react'
 
-export default function updatePost({params}:{ params: {id : string} }){
+export default function UpdatePost({params}:{ params: {id : string} }){
 	const id = params.id;
 	const [title, setTitle] = useState('')
 	const [content, setContent] = useState('')
@@ -49,7 +49,7 @@ export default function updatePost({params}:{ params: {id : string} }){
         setContent(json.post.content)
         setTags(json.post.tags)
     }
-    
+
     return (
         <form className='w-[500px] mx-auto pt-20 flex flex-col gap-3' onSubmit={handleSubmit}>
         	<div className='mx-auto pb-5 font-bold'>Update Post</div>

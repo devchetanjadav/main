@@ -1,8 +1,8 @@
 "use client"
-import {useRouter, redirect} from 'next/navigation'
+import {useRouter} from 'next/navigation'
 import React, {useState} from 'react'
 
-export default function createPost(){
+export default function CreatePost(){
 	const [title, setTitle]  = useState('');
 	const [content, setContent] = useState('')
 	const [tags, setTags] = useState('')

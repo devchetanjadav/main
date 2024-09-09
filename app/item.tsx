@@ -2,13 +2,13 @@
 
 import React from 'react'
 import { Posts } from '@prisma/client'
-import { useRouter, redirect } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 interface Props {
     posts: Posts
 }
 
-export default function items({ post }: Props){
+export default function Items({ post }: Props){
 
 	const router = useRouter()
 
