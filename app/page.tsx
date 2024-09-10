@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
-import Item from './item'
+//import Item from './item'
 
-const getPosts  = async () => {    
+/*const getPosts  = async () => {    
   // Because this is server components, we have to define the URL with http
   const res = await fetch(process.env.BASE_URL + '/api/post', { next: { revalidate: 0 } })
   //console.log(res)
@@ -14,7 +14,7 @@ const getPosts  = async () => {
   }else{
     return
   }
-}
+}*/
 
 export default async function Notes(){
 
