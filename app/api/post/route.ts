@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 const prisma = new PrismaClient();
 
 // Action to read
-export const GET = async (req: NextRequest) => {
+export const GET = async () => {
   	const posts = await prisma.posts.findMany({});
 
   	return NextResponse.json({
