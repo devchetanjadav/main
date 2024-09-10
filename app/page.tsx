@@ -7,8 +7,12 @@ const getPosts  = async () => {
   const res = await fetch(process.env.BASE_URL + '/api/post', { next: { revalidate: 0 } })
 
   // Define the output to json, because if only res, it will return by any type
-  const json = await res.json()
-  return json
+  if(res){
+    const json = await res.json()
+    return json
+  }else{
+    return
+  }
 }
 
 export default async function Notes(){
