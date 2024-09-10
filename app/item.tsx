@@ -1,11 +1,11 @@
 "use client"
 
 import React from 'react'
-import { posts } from '@prisma/client'
+import { Posts } from '@prisma/client'
 import { useRouter } from 'next/navigation'
 
 interface Props {
-    post: posts
+    post: Posts
 }
 
 export default function Items({ post }: Props){
