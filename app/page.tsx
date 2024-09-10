@@ -5,10 +5,11 @@ import Item from './item'
 const getPosts  = async () => {    
   // Because this is server components, we have to define the URL with http
   const res = await fetch(process.env.BASE_URL + '/api/post', { next: { revalidate: 0 } })
-
+  //console.log(res)
   // Define the output to json, because if only res, it will return by any type
   if(res){
     const json = await res.json()
+     console.log(json)
     return json
   }else{
     return
