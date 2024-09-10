@@ -5,7 +5,7 @@ import { Posts } from '@prisma/client'
 import { useRouter } from 'next/navigation'
 
 interface Props {
-    posts: Posts
+    post: Posts
 }
 
 export default function Items({ post }: Props){
